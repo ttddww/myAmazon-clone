@@ -1,0 +1,144 @@
+/* Header.module.css */
+.fixed {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+.Header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #232f3e;
+  padding: 10px 15px;
+  color: white;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo_container img {
+  width: 100px;
+  padding-top: 10px;
+  margin-right: 20px;
+}
+
+.logo_container div p {
+  margin: 0;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.logo_container div span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.search_container {
+  display: flex;
+  flex-grow: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 15px;
+}
+
+.search_container select {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.search_container input {
+  flex-grow: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.search_container svg {
+    padding: 8px;
+    background: #febd69;
+    color: #1a1a1a;
+}
+
+.search_container input::placeholder {
+  color: #999;
+}
+
+.order_container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.order_container a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.order_container img {
+  width: 30px;
+  margin-right: 10px;
+}
+.location{
+  display: flex;
+  gap: 15px;
+}
+.location div span{
+  font-size: 20px;
+}
+.flag{
+  display: flex;
+}
+.order_container p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.order_container span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart img {
+  width: 60px;
+}
+
+.cart span {
+  margin-left: 5px;
+  font-weight: bold;
+}
+.order_container a:hover,
+.location:hover,
+.logo_container a:hover,
+.LowerHeader ul li:hover {
+    border: 1px solid white;
+    border-radius: 3px;
+}
+.LowerHeader{
+  background-color: #222b37;
+  color: white;
+  padding: 10px 15px;
+}
+.LowerHeader ul{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.LowerHeader ul li{
+  display: flex;
+}
+
