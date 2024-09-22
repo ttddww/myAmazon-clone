@@ -114,12 +114,17 @@
 }
 
 .cart img {
-  width: 60px;
+  width: 80px;
 }
 
 .cart span {
-  margin-left: 5px;
-  font-weight: bold;
+  position: absolute;
+    font-weight: bold;
+    top: 0px;
+    font-size: 25px;
+    background-color: #1a1a1a;
+    left: 35px;
+    color: orange;
 }
 .order_container a:hover,
 .location:hover,

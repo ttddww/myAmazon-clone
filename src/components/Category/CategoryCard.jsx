@@ -1,10 +1,9 @@
 import React from 'react'
 import classes from './Category.module.css'
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CategoryCard({data}) {
     console.log(data);
-    // const {categoryName} = useParams();
     
     
   return (
