@@ -1,17 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext } from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
-import classes from './Header.module.css'
-import LowerHeader from './LowerHeader';
+import classes from "./Header.module.css";
+import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
-import { DataContext } from '../../DataProvider/DataProvider';
+import { DataContext } from "../../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 
 function Header() {
-  const [{ basket }, dispatch] = useContext(DataContext);
+  const [{ basket, user }, dispatch] = useContext(DataContext);
 
   const totalItem = basket.reduce((amount, item) => {
-    return item.amount + amount
-  }, 0)
+    return item.amount + amount;
+  }, 0);
 
   return (
     <section className={classes.fixed}>
@@ -53,11 +54,20 @@ function Header() {
                 <option value="">EN</option>
               </select>
             </Link>
-            <Link to="/">
-              <p>Hello, Sign In</p>
-              <span>Account & Lists</span>
+            <Link to={!user && "/auth"}>
+              {user ? (
+                <>
+                  <p>Hello, {user?.email?.split("@")[0]}</p>
+                  <span onClick={() => auth.signOut()}>Sign Out</span>
+                </>
+              ) : (
+                <>
+                  <p>Hello, Sign In</p>
+                  <span>Account & Lists</span>
+                </>
+              )}
             </Link>
-            <Link to="/">
+            <Link to="/orders">
               <p>Returns</p>
               <span>& Orders</span>
             </Link>

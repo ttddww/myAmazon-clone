@@ -37,10 +37,10 @@ function Cart() {
         {basket?.length == 0 ? (
           <p>Your basket is empty</p>
         ) : (
-          basket?.map((item, i) => (
+          basket?.map((item) => (
             <section className={classes.card_product}>
               <ProductCard
-                key={i}
+                key={item.id}
                 product={item}
                 renderDesc={true}
                 renderAdd={false} 
@@ -69,7 +69,7 @@ function Cart() {
             <input type="checkbox" />
             <small>This order contains a gift</small>
           </span>
-          <Link to="/payment">Continue to checkout</Link>
+          <Link to="/payments">Continue to checkout</Link>
         </div>
       )}
     </section>
